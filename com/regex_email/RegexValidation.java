@@ -25,7 +25,8 @@ public class RegexValidation {
     }
 
     public static void main(String[] args) {
-        boolean regexCheck = isValid("^[a-z]{1,10}[\\@][a-z]{1,10}[\\.][a-z]{1,4}$", "abc@yahoo.com");
+        boolean regexCheck = isValid("^[a-z]{1,10}[._+-]?[a-z]{1,10}?[\\@][a-z]{1,10}[\\.][a-z]{1,4}([\\.][a-z]{2})?$",
+                "abc.xyz@yahoo.com");
         System.out.println(regexCheck);
     }
 }
