@@ -8,7 +8,6 @@ package com.regex_email;
 import java.util.regex.Pattern;
 
 public class RegexValidation {
-
     /*
      * @purpose: Ability to check valid regex
      *
@@ -19,7 +18,6 @@ public class RegexValidation {
      *
      * @return: Returns true or false
      */
-
     static public boolean isValid(String regex, String input) {
         Pattern pattern = Pattern.compile(regex);
         return Pattern.matches(regex, input);
@@ -27,7 +25,7 @@ public class RegexValidation {
     }
 
     public static void main(String[] args) {
-        boolean regexCheck = isValid("^[a-z]{1,10}[@][a-z]{1,10}$", "abc@yahoo");
+        boolean regexCheck = isValid("^[a-z]{1,10}[\\@][a-z]{1,10}[\\.][a-z]{1,4}$", "abc@yahoo.com");
         System.out.println(regexCheck);
     }
 }
